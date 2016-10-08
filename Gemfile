@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+source 'https://rails-assets.org'  # Add this at line 2
 
 ruby '2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
