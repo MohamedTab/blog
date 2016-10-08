@@ -19,9 +19,11 @@
   <div class="field">
     <%= f.text_area :body, class: "form-control", placeholder: "Tapez votre article ici"; %>
   </div>
-  <%= f.input :photo, as: :attachinary %>
+  <%= f.attachinary_file_field :photo %>
+  <br>
+  <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn-medium", style: "float: right;"%>
   </div>
 </div>
 <% end %>

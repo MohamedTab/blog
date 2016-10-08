@@ -13,27 +13,33 @@
 </div>
 <br>
 <br>
-<br>
-<br>
-<br>
-
 
 <div class="container">
   <div class="row">
-
+    <div class="col-sm-12 text-center" style="font-size: 18px;">
+      <button style="color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px; border: 1px solid #282828;"><i class="fa fa-clock-o" aria-hidden="true" style="padding-right: 5px;"> </i>Récent</button>
+      <button style="border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px;"><i class="fa fa-star" aria-hidden="true" style="padding-right: 5px;"> </i>Populaire</button>
+<br>
+<br>
+<br>
+    </div>
   </div>
   <div class="row">
-    <% @articles.each do |article| %>
-      <div class="col-sm-6" style="margin-bottom: 30px;">
-        <div style="width: 95%; height: 400px; background-color: grey; margin: 0 auto;">
-          <%= article.title %>
-          
-          <%= link_to 'Show', article %>
-          <!-- <%= link_to 'Edit', edit_article_path(article) %> -->
-          <!-- <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> -->
-        </div>
-      </div>
-    <% end %>
+  <% @articles.each do |article| %>
+    <div class="col-sm-6">
+      <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+              <h2><%= article.title %></h2>
+              <p>Premiere phrase de l'article</p>
+          </div>
+        <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
+             <%= link_to 'Show', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
+    </div>   
+
+    </div>
+  <% end %>
+
   </div>
 </div>
    
