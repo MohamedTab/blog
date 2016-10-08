@@ -36,9 +36,8 @@ gem 'figaro'
 gem "cloudinary", "1.1.0"
 gem "attachinary"
 gem "jquery-fileupload-rails"
-
-gem 'puma'
-
+gem 'rails_12factor', group: :production
+gem 'puma',           group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
