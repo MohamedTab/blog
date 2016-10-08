@@ -1,0 +1,45 @@
+<div id="header" class="text-center">
+
+  <div class="header-content">
+
+  <h1 style="font-size: 60px;"> My blog</h1>
+
+  <h2 style="font-family: 'Lato', sans-serif;"> <span id="target"> </span><span id="cursor"></span></h2>
+<br>
+
+
+
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="container">
+  <div class="row">
+
+  </div>
+  <div class="row">
+    <% @articles.each do |article| %>
+      <div class="col-sm-6" style="margin-bottom: 30px;">
+        <div style="width: 95%; height: 400px; background-color: grey; margin: 0 auto;">
+          <%= article.title %>
+          
+          <%= link_to 'Show', article %>
+          <!-- <%= link_to 'Edit', edit_article_path(article) %> -->
+          <!-- <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+   
+ 
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
+<i class="fa fa-facebook" style="color: red" aria-hidden="true"></i>
