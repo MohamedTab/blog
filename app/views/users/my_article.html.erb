@@ -1,1 +1,37 @@
-my_article.html.erb
+<div id="header" class="text-center">
+	<div class="header-content">
+  		<h1 style="font-size: 60px;"> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
+  		<h2 style="font-family: 'Lato', sans-serif;"> <span id="target"> </span><span id="cursor"></span></h2>
+	</div>
+</div>
+<br>
+
+<div class="row">
+	<div class="col-sm-12 text-center" style="padding-bottom: 30px; margin-bottom: 30px;">
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #C2C2C2;">
+			<%= link_to "Rediger un article", new_article_path, style: "color: #C2C2C2;" %>
+		</div>
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #999999;">
+			<%= link_to "Mes articles", user_my_article_path(current_user), style: "color: #C2C2C2;" %>
+		</div>
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #999999;">
+			<%= link_to "Mes articles", user_my_article_path(current_user), style: "color: #C2C2C2;" %>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+<% @articles.each do |article| %>
+    <div class="col-sm-4">
+        <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
+          <div class="card-category">Popular</div>
+          <div class="card-description">
+              <h2><%= article.title %></h2>
+              <p>Premiere phrase de l'article</p>
+          </div>
+        <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
+             <%= link_to 'Show', edit_article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
+    	</div>   
+    </div>
+ <% end %>
+ </div>

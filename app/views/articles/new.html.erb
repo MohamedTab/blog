@@ -4,16 +4,22 @@
   		<h2 style="font-family: 'Lato', sans-serif;"> <span id="target"> </span><span id="cursor"></span></h2>
 	</div>
 </div>
-
 <br>
-<br>
+<div class="row">
+	<div class="col-sm-12 text-center" style="padding-bottom: 30px; margin-bottom: 30px;">
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #C2C2C2;">
+			<%= link_to "Rediger un article", new_article_path, style: "color: #C2C2C2;" %>
+		</div>
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #999999;">
+			<%= link_to "Mes articles", user_my_article_path(current_user), style: "color: #C2C2C2;" %>
+		</div>
+		<div class="col-sm-4" style="border-bottom: 1px solid #C2C2C2; padding-bottom: 15px; color: #999999;">
+			<%= link_to "Mes articles", user_my_article_path(current_user), style: "color: #C2C2C2;" %>
+		</div>
+	</div>
+</div>
 
-<ul>
-<li> <%= link_to "Rediger un article", new_article_path %></li>
-	<li> <%= link_to "Mes articles", user_my_article_path(current_user) %></li>
-	
-</ul>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', articles_path %>
+
