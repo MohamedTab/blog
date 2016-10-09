@@ -3,7 +3,12 @@
   <div class="header-content">
 
   <h1 style="font-size: 60px;"> My blog</h1>
+<br>
+  <% if user_signed_in? %>
+  <%= link_to "Mon compte", user_my_article_path(current_user.id), style: "border: 1px solid #C2C2C2; padding: 10px 30px 10px 30px; color: #C2C2C2;" %>
+  <% else %>
 
+  <% end %>
   <h2 style="font-family: 'Lato', sans-serif;"> <span id="target"> </span><span id="cursor"></span></h2>
 <br>
 
@@ -68,4 +73,3 @@
 
 <br>
 
-<%= link_to 'New Article', new_article_path %>

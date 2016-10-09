@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
   resources :articles 
     # collection do                       # collection => no article id in URL
     # end

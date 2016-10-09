@@ -37,6 +37,8 @@ class ArticlesController < ApplicationController
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @id_article = @article.user_id
+    @name = User.where(id: @id_article)
   end
 
   # GET /articles/new
