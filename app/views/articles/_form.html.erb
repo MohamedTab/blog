@@ -20,7 +20,7 @@
     
     <%= f.text_field :title, class: "form-control", placeholder: "Titre"%>
   </div>
-  <div class="field">
+  <div class="field" data-no-turbolink>
     <%= f.cktext_area :body, rows: "10", class: "form-control", placeholder: "Tapez votre article ici"; %>
   </div>
   <%= f.attachinary_file_field :photo %>
