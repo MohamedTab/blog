@@ -1,12 +1,18 @@
 <div id="header" class="text-center">
 	<div class="header-content">
-  		<h1 style="font-size: 60px;"> My blog</h1>
+  		<h1 style="font-size: 60px;"> <%= current_user.first_name %> <%= current_user.last_name %> </h1>
   		<h2 style="font-family: 'Lato', sans-serif;"> <span id="target"> </span><span id="cursor"></span></h2>
 	</div>
 </div>
 
 <br>
 <br>
+
+<ul>
+<li> <%= link_to "Rediger un article", new_article_path %></li>
+	<li> <%= link_to "Mes articles", user_my_article_path(current_user) %></li>
+	
+</ul>
 
 <%= render 'form' %>
 

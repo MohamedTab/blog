@@ -17,10 +17,30 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center" style="font-size: 18px;">
-      <button style="color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px; border: 1px solid #282828;"><i class="fa fa-clock-o" aria-hidden="true" style="padding-right: 5px;"> </i>Récent</button>
-      <button style="border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px;"><i class="fa fa-star" aria-hidden="true" style="padding-right: 5px;"> </i>Populaire</button>
+     <!--  <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: 'delete' %></li>  -->
+      <%= link_to(
+      content_tag(
+        :i,
+        " Récent", 
+        class: 'fa fa-star'
+      ), 
+      articles_path(:article => 'recent'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px;"
+    ) 
+%>
+
+  <%= link_to(
+      content_tag(
+        :i,
+        " Aléatoire", 
+        class: 'fa fa-clock-o'
+      ), 
+      articles_path(:article => 'random'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px;"
+    ) 
+%>
+
 <br>
 <br>
+
 <br>
     </div>
   </div>
@@ -49,4 +69,3 @@
 <br>
 
 <%= link_to 'New Article', new_article_path %>
-<i class="fa fa-facebook" style="color: red" aria-hidden="true"></i>

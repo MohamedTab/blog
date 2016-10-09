@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
-  resources :articles
+  
+  resources :articles 
+    # collection do                       # collection => no article id in URL
+    # end
+
+
   root 'articles#index'
+ devise_for :users, controllers: { registrations: "users/registrations" }
+  resources :users do
+     get '/my_article' => 'users#my_article', as: :my_article
+   
+
+   end
 
   mount Attachinary::Engine => "/attachinary"
   # The priority is based upon order of creation: first created -> highest priority.

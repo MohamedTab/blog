@@ -14,10 +14,14 @@
 <div class="col-sm-offset-2 col-sm-8">
   <div class="field" >
     
+    <%= f.text_field :theme, class: "form-control", placeholder: "Theme"%>
+  </div>
+  <div class="field" >
+    
     <%= f.text_field :title, class: "form-control", placeholder: "Titre"%>
   </div>
   <div class="field">
-    <%= f.text_area :body, class: "form-control", placeholder: "Tapez votre article ici"; %>
+    <%= f.text_area :body, rows: "10", class: "form-control", placeholder: "Tapez votre article ici"; %>
   </div>
   <%= f.attachinary_file_field :photo %>
   <br>
