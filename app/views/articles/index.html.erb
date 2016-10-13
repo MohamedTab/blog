@@ -50,8 +50,10 @@
     </div>
   </div>
   <div class="row">
-<% if @article.nil? == true %>
-<% @articles.each do |article| %>
+<% if @articles.nil? == true %>
+
+<% else %>
+  <% @articles.each do |article| %>
     <div class="col-sm-6">
       <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
           <div class="card-category">Popular</div>
@@ -65,9 +67,6 @@
 
     </div>
   <% end %>
-
-<% else %>
-  
 
   <% end %>
 
