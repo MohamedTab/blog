@@ -2,7 +2,7 @@
 
   <div class="header-content">
 
-  <h1 style="font-size: 60px;"> My blog</h1>
+  <h1 style="font-size: 60px;"> KUMITY</h1>
 <br>
   <% if user_signed_in? %>
   <%= link_to "Mon compte", user_my_article_path(current_user.id), style: "border: 1px solid #C2C2C2; padding: 10px 30px 10px 30px; color: #C2C2C2;" %>
@@ -22,14 +22,14 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center" style="font-size: 18px;">
-     <!--  <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: 'delete' %></li>  -->
+      <!-- <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: 'delete' %></li>  -->
       <%= link_to(
       content_tag(
         :i,
         " Récent", 
         class: 'fa fa-star'
       ), 
-      articles_path(:article => 'recent'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px;"
+      articles_path(:article => 'recent'), style: "border: 1px solid #C2C2C2;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #C2C2C2"
     ) 
 %>
 
@@ -39,7 +39,7 @@
         " Aléatoire", 
         class: 'fa fa-clock-o'
       ), 
-      articles_path(:article => 'random'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 30px 10px 30px; width: 170px;"
+      articles_path(:article => 'random'), style: "border: 1px solid #C2C2C2;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #C2C2C2"
     ) 
 %>
 
