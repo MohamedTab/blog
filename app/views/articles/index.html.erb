@@ -6,6 +6,8 @@
 <br>
   <% if user_signed_in? %>
   <%= link_to "Mon compte", user_my_article_path(current_user.id), style: "border: 1px solid #C2C2C2; padding: 10px 30px 10px 30px; color: #C2C2C2;" %>
+      <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: 'delete' %></li> 
+  
   <% else %>
 
   <% end %>
@@ -22,7 +24,6 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center" style="font-size: 18px;">
-      <!-- <li><%= link_to 'Se déconnecter', destroy_user_session_path, method: 'delete' %></li>  -->
       <%= link_to(
       content_tag(
         :i,
