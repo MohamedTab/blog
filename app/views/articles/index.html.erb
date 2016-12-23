@@ -56,7 +56,7 @@
 <% else %>
   <% @articles.each do |article| %>
     <div class="col-sm-6">
-          <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px; paddding-left: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
+          <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 380, height: 400, crop: :fill %>')">
       
               <div class="card-description">
                   <h2><%= article.title %></h2>
