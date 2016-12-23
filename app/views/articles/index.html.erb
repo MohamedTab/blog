@@ -56,18 +56,19 @@
 <% else %>
   <% @articles.each do |article| %>
     <div class="col-sm-6">
-      <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-              <h2><%= article.title %></h2>
-              <% article.body.split(" " || ">")[0..29].each do |word| %>
-                <%= raw word %>
-              <% end %>
+          <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px; paddding-left: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 400, height: 400, crop: :fill %>')">
+      
+              <div class="card-description">
+                  <h2><%= article.title %></h2>
+                  <% article.body.split(" " || ">")[0..29].each do |word| %>
+                    <%= raw word %>
+                  <% end %>
 
-          </div>
-        <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
-             <%= link_to 'Show', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
-    </div>   
+              </div>
+            <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
+                 <%= link_to 'Show', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
+   
+      </div>
 
     </div>
   <% end %>

@@ -149,6 +149,10 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   z-index: 1;
 }
 
+.kumity {
+  display: none;
+  }
+
 @media screen and (max-width: 768px) {
   #logo {
     height: 40px;
@@ -162,7 +166,14 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
     padding-bottom: 0;
   }
   .navbar-default .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  .navbar {
     background-color: white;
+  }
+
+  .kumity {
+    display: block;
   }
 }
 
