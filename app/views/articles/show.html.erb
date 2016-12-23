@@ -8,7 +8,7 @@
   	<div class="col-sm-12 text-center">
     
       <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @article.photo.path, width: 600, height: 400, crop: :fill %>')">
-        <div class="card-category">Popular</div>
+       <!--  <div class="card-category">Popular</div> -->
           <div class="col-sm-12 text-center" style="position: absolute; bottom: 10px;">
               <h2><%= @article.title %></h2>
           </div>
@@ -17,9 +17,9 @@
   	</div>
   	<div class="col-sm-offset-2 col-sm-8">
   		<%= raw @article.body %>
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2Flocalhost%3A3000%2Farticles%2F15&layout=button_count&size=small&mobile_iframe=true&width=83&height=20&appId" width="83" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      
       <blockquote class="blockquote-reverse">
-          <%= @name[0].first_name%> <%= @name[0].last_name %>
+          <%= raw @article.writer %>
           <!-- <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer> -->
       </blockquote>
   	</div>

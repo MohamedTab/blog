@@ -216,7 +216,7 @@ padding-left: 100px;
 }
 
 
-.navbar.opaque .navbar-nav > li > a {
+.navbar.opaque .navbar-nav > li {
   color: red;
   transition: color 1s ease 0s;
 }
@@ -225,7 +225,7 @@ padding-left: 100px;
 }
 
 .navbar-default.opaque .btn-link {
-  color: #E0115F;
+  color: black;
 }
 .navbar-default.opaque .btn-link:focus {
   color: #D49586;
@@ -234,16 +234,21 @@ padding-left: 100px;
 
 
 .navbar.opaque_nav_bar_variation {
-
-
-  background-color: white;
+  color: red;
   background: white;
   transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
   box-shadow: 0px 0px 4px #969696;
+}
+
+.navbar.opaque_nav_bar_variation .navbar-nav > li {
+  color: #282828;
+  transition: color 1s ease 0s;
 }
 
 .navbar.opaque_nav_bar_variation .navbar-nav > li > i {
   color: #282828;
   transition: color 1s ease 0s;
 }
+
+
 

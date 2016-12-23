@@ -30,7 +30,7 @@
         " Récent", 
         class: 'fa fa-star'
       ), 
-      articles_path(:article => 'recent'), style: "border: 1px solid #C2C2C2;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #C2C2C2"
+      articles_path(:article => 'recent'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #282828"
     ) 
 %>
 
@@ -40,7 +40,7 @@
         " Aléatoire", 
         class: 'fa fa-clock-o'
       ), 
-      articles_path(:article => 'random'), style: "border: 1px solid #C2C2C2;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #C2C2C2"
+      articles_path(:article => 'random'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 170px; color: #282828"
     ) 
 %>
 
@@ -60,7 +60,10 @@
           <div class="card-category">Popular</div>
           <div class="card-description">
               <h2><%= article.title %></h2>
-              <p>Premiere phrase de l'article</p>
+              <% article.body.split(" " || ">")[0..29].each do |word| %>
+                <%= raw word %>
+              <% end %>
+
           </div>
         <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
              <%= link_to 'Show', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
