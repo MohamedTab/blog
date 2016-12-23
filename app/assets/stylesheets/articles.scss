@@ -111,6 +111,10 @@ link:hover {
   color: #282828;
 
 }
+
+.kumity_laptop {
+  display: block;
+}
 @media screen and (max-width: 768px) {
 .mobile_box_short{
   border: 1px solid #282828;
@@ -119,5 +123,15 @@ link:hover {
   padding: 8px 20px 8px 20px; 
   width: 145px; 
   color: #282828;
+}
+.kumity_laptop {
+  display: none;
+}
+
+.header-content {
+  padding-top: 30%;
+  padding-bottom: 35%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.2)
 }
 }
