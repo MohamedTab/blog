@@ -101,3 +101,23 @@ body{
 link:hover {
   background-color: white;
 }
+
+.box_short {
+  border: 1px solid #282828;
+  color: #282828;
+  background-color: white; 
+  padding: 10px 38px 10px 38px; 
+  width: 175px; 
+  color: #282828;
+
+}
+@media screen and (max-width: 768px) {
+.mobile_box_short{
+  border: 1px solid #282828;
+  color: #282828;
+  background-color: white; 
+  padding: 8px 20px 8px 20px; 
+  width: 135px; 
+  color: #282828;
+}
+}

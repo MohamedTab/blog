@@ -28,9 +28,9 @@
       content_tag(
         :i,
         " Récent", 
-        class: 'fa fa-star'
+        class: 'fa fa-star box_short mobile_box_short'
       ), 
-      articles_path(:article => 'recent'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 160px; color: #282828"
+      articles_path(:article => 'recent')
     ) 
 %>
 
@@ -38,9 +38,9 @@
       content_tag(
         :i,
         " Aléatoire", 
-        class: 'fa fa-clock-o'
+        class: 'fa fa-clock-o box_short mobile_box_short'
       ), 
-      articles_path(:article => 'random'), style: "border: 1px solid #282828;color: #282828; background-color: white; padding: 10px 38px 10px 38px; width: 160px; color: #282828"
+      articles_path(:article => 'random')
     ) 
 %>
 </div>
