@@ -264,7 +264,9 @@ padding-left: 100px;
   transition: color 1s ease 0s;
 }
 
-
+.list_social_icon {
+  padding-left: 200px;
+}
 @media screen and (max-width: 768px) {
   #logo {
     height: 40px;
@@ -287,7 +289,7 @@ padding-left: 100px;
   }
 
   .kumity {
-    display: none;
+    display: block;
   }
   .link_nav {
   color: white;
@@ -311,6 +313,10 @@ padding-left: 100px;
   .navbar.opaque_nav_bar_variation .navbar-nav > li > i {
   color: white;
   transition: color 1s ease 0s;
+}
+
+.list_social_icon {
+  padding-left: 0px;
 }
 
 }
