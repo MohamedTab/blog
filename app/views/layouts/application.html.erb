@@ -28,7 +28,16 @@
  
 </head>
 <body>
-<%= render partial: "shared/navbar" %>
+
+
+
+<% if content_for?(:navbar) %>
+    <%= yield(:navbar) %>
+<% else %>
+      <%= render 'shared/navbar' %>
+<% end %>
+
+
 <%= yield %>
 
 </body>

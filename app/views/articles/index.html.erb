@@ -50,12 +50,14 @@
 <br>
     </div>
   </div>
-  <div class="row">
+  <div class="row" style="margin-left: 0px; margin-right: 0px;">
 <% if @articles.nil? == true %>
 
 <% else %>
+<div class="col-xs- 12 col-sm-offset-1 col-sm-10">
   <% @articles.each do |article| %>
-    <div class="col-sm-6">
+    
+      <div class="col-xs-12 col-sm-6">
           <div class="card" style="height: 400px; margin: 0 auto; margin-bottom: 30px;width: 100%; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path article.photo.path, width: 380, height: 400, crop: :fill %>')">
       
               <div class="card-description">
@@ -66,12 +68,12 @@
 
               </div>
             <!-- <a class="card-link" href="#" style="display:block; width:100%; height:100%;"></a> -->
-                 <%= link_to 'Show', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
+                 <%= link_to '', article_path(article), style: "display:block; width:100%; height:100%;", class: "card-link"%>
    
-      </div>
-
-    </div>
+          </div>
+        </div>
   <% end %>
+    </div>
 
   <% end %>
 

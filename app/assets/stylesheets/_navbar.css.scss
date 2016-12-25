@@ -156,17 +156,19 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 @media screen and (max-width: 768px) {
   #logo {
     height: 40px;
+
   }
   .navbar-wagon .navbar-brand,
   .navbar-wagon .navbar-brand:hover
    {
     display: block;
-    color: $color;
+    color: #282828;
     padding-top: 0;
     padding-bottom: 0;
   }
   .navbar-default .navbar-collapse {
-    background-color: rgba(255, 255, 255, 0.7);
+    color: #282828;
+    background-color: #282828;
   }
   .navbar {
     background-color: white;
@@ -227,10 +229,7 @@ padding-left: 100px;
 }
 
 
-.navbar.opaque .navbar-nav > li {
-  color: red;
-  transition: color 1s ease 0s;
-}
+
 .navbar.opaque .navbar-nav > li > a:active {
   text-decoration: underline;
 }
@@ -249,6 +248,38 @@ padding-left: 100px;
   background: white;
   transition: background-color 1s ease 0s; /* Transition effect to make it fade in (optional) */
   box-shadow: 0px 0px 4px #969696;
+}
+
+.kumity_logo {
+  font-size: 5px;
+  display: none;
+}
+.kumity_logo.opaque_logo {
+    display: block;
+    font-size: 30px;
+        -webkit-transition: font-size 1s ease;
+  -moz-transition: font-size 1s ease;
+  -ms-transition: font-size 1s ease;
+  -o-transition: font-size 1s ease;
+  transition: font-size 1s ease;
+    color: black;
+    
+  }
+
+.box_nav {
+  display: block;
+}
+
+.link_nav {
+  color: white;
+}
+
+.link_nav {
+  color: white;
+}
+
+.link_nav.color_list_nav {
+  color: #282828;
 }
 
 .navbar.opaque_nav_bar_variation .navbar-nav > li {
