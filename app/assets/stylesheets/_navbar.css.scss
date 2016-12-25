@@ -153,31 +153,6 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   display: none;
   }
 
-@media screen and (max-width: 768px) {
-  #logo {
-    height: 40px;
-
-  }
-  .navbar-wagon .navbar-brand,
-  .navbar-wagon .navbar-brand:hover
-   {
-    display: block;
-    color: #282828;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  .navbar-default .navbar-collapse {
-    color: #282828;
-    background-color: #282828;
-  }
-  .navbar {
-    background-color: white;
-  }
-
-  .kumity {
-    display: block;
-  }
-}
 
 
 .espace {
@@ -274,9 +249,6 @@ padding-left: 100px;
   color: white;
 }
 
-.link_nav {
-  color: white;
-}
 
 .link_nav.color_list_nav {
   color: #282828;
@@ -292,5 +264,55 @@ padding-left: 100px;
   transition: color 1s ease 0s;
 }
 
+
+@media screen and (max-width: 768px) {
+  #logo {
+    height: 40px;
+
+  }
+  .navbar-wagon .navbar-brand,
+  .navbar-wagon .navbar-brand:hover
+   {
+    display: block;
+    color: #282828;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .navbar-default .navbar-collapse {
+    color: #282828;
+    background-color: #282828;
+  }
+  .navbar {
+    background-color: white;
+  }
+
+  .kumity {
+    display: none;
+  }
+  .link_nav {
+  color: white;
+
+}
+
+.link_nav.color_list_nav {
+  color: white;
+}
+
+/*logo navbar*/
+.kumity_logo {
+  font-size: 5px;
+  display: none;
+}
+.kumity_logo.opaque_logo {
+    display: none;
+  }
+
+/*SOCIAL LOGO*/
+  .navbar.opaque_nav_bar_variation .navbar-nav > li > i {
+  color: white;
+  transition: color 1s ease 0s;
+}
+
+}
 
 
